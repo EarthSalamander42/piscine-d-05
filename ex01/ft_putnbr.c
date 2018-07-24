@@ -6,7 +6,7 @@
 /*   By: jmaguire <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/10 14:20:55 by jmaguire          #+#    #+#             */
-/*   Updated: 2018/07/10 14:20:57 by jmaguire         ###   ########.fr       */
+/*   Updated: 2018/07/24 17:39:36 by jmaguire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,23 @@ void	ft_putchar(char c);
 
 void	ft_putnbr(int nb)
 {
-	long nbr;
-
-	nbr = nb;
-	if (nbr < 0)
+	if (nb == -2147483648)
 	{
 		ft_putchar('-');
-		nbr = -nbr;
+		ft_putchar('2');
+		nb = 147483648;
 	}
-	if (nbr < 10)
+	if (nb < 0)
 	{
-		ft_putchar(nbr + 48);
+		nb = -nb;
+	}
+	if (nb < 10)
+	{
+		ft_putchar(nb + 48);
 	}
 	else
 	{
-		ft_putnbr(nbr / 10);
-		ft_putnbr(nbr % 10);
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
 	}
 }

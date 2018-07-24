@@ -13,21 +13,18 @@
 char	*ft_strstr(char *str, char *to_find)
 {
 	int i;
-	int j;
 
-	i = 0;
-	j = 0;
-	while (str[i] != '\0')
+	if (to_find[0] == '\0')
+		return (str);
+	while (str[0] != '\0')
 	{
-		while (str[i + j] == to_find[j])
-		{
-			if (to_find[j + 1] == '\0')
-			{
-				return (str + i);
-			}
-			j++;
-		}
+		i = 0;
+		while (str[i] == to_find[i] && str[i] != '\0' && to_find[i] != '\0')
+			i++;
+		if (to_find[i] == '\0')
+			return (str);
+		str++;
 		i++;
 	}
-	return ("ERROR");
+	return ((void*)0);
 }

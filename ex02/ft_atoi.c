@@ -25,12 +25,11 @@ int		ft_atoi(const char *str)
 		negative = -1;
 		i++;
 	}
-	else if (str[i] == '+')
+	if (str[i] == '+')
 		i++;
-	while (str[i] != '\0')
+	while (str[i] >= 48 && str[i] <= 57 && str[i] != '\0')
 	{
-		if ((str[i] >= 48 && str[i] <= 57))
-			out = out * 10 + str[i] - 48;
+		out = out * 10 + str[i] - 48;
 		i++;
 	}
 	return (negative * out);
