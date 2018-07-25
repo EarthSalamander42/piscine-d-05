@@ -6,9 +6,11 @@
 /*   By: jmaguire <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/10 14:20:55 by jmaguire          #+#    #+#             */
-/*   Updated: 2018/07/24 17:39:36 by jmaguire         ###   ########.fr       */
+/*   Updated: 2018/07/24 23:47:25 by jmaguire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <limits.h>
 
 void	ft_putchar(char c);
 
@@ -18,16 +20,15 @@ void	ft_putnbr(int nb)
 	{
 		ft_putchar('-');
 		ft_putchar('2');
-		nb = 147483648;
+		ft_putnbr(147483648);
 	}
-	if (nb < 0)
+	else if (nb < 0)
 	{
-		nb = -nb;
+		ft_putchar('-');
+		ft_putchar(nb * -1);
 	}
-	if (nb < 10)
-	{
+	else if (nb >= 0 && nb <= 10)
 		ft_putchar(nb + 48);
-	}
 	else
 	{
 		ft_putnbr(nb / 10);

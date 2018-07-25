@@ -6,18 +6,18 @@
 /*   By: jmaguire <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/11 10:57:05 by jmaguire          #+#    #+#             */
-/*   Updated: 2018/07/11 10:57:07 by jmaguire         ###   ########.fr       */
+/*   Updated: 2018/07/24 23:56:03 by jmaguire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char		ft_strupcase(char *str)
+char		*ft_strupcase(char *str)
 {
 	int i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] >= 97 && str[i] <= 122 && str[i])
+		if (str[i] >= 97 && str[i] <= 122 && str[i] != '\0')
 			str[i] = str[i] - 32;
 		i++;
 	}

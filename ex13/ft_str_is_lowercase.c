@@ -6,7 +6,7 @@
 /*   By: jmaguire <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/11 14:40:20 by jmaguire          #+#    #+#             */
-/*   Updated: 2018/07/24 17:56:17 by jmaguire         ###   ########.fr       */
+/*   Updated: 2018/07/24 23:33:16 by jmaguire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int		ft_str_is_lowercase(char *str)
 		return (1);
 	while (str[i] != '\0')
 	{
-		if (str[i] <= 65 && str[i] >= 90)
+		if (str[i] <= 65 || str[i] >= 90)
 			i++;
 		else
 			return (0);

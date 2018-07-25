@@ -6,7 +6,7 @@
 /*   By: jmaguire <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/11 11:18:24 by jmaguire          #+#    #+#             */
-/*   Updated: 2018/07/11 11:18:26 by jmaguire         ###   ########.fr       */
+/*   Updated: 2018/07/24 23:53:41 by jmaguire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,5 @@ char	ft_strcapitalize(char *str)
 		ft_putchar(str[i]);
 		i++;
 	}
-	return (*str);
+	return (str);
 }
