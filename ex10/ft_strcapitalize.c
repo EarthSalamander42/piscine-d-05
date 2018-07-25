@@ -28,7 +28,7 @@ int		ft_is_lower_letter(char c)
 		return (0);
 }
 
-char	ft_strcapitalize(char *str)
+char	*ft_strcapitalize(char *str)
 {
 	int i;
 
