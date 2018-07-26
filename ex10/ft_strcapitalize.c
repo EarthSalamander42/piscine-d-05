@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
 int		ft_is_special(char c)
 {
 	if ((c == 32 || c == 43 || c == 45))
@@ -54,7 +52,6 @@ char	*ft_strcapitalize(char *str)
 	{
 		if (ft_is_special(str[i]) == 1 && ft_is_lower_letter(str[i + 1]) == 1)
 			str[i + 1] = str[i + 1] - 32;
-		ft_putchar(str[i]);
 		i++;
 	}
 	return (str);

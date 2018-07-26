@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <limits.h>
-
 void	ft_putchar(char c);
 
 void	ft_putnbr(int nb)
@@ -25,7 +23,8 @@ void	ft_putnbr(int nb)
 	else if (nb < 0)
 	{
 		ft_putchar('-');
-		ft_putchar(nb * -1);
+		nb = nb * -1;
+		ft_putnbr(nb);
 	}
 	else if (nb >= 0 && nb < 10)
 		ft_putchar(nb + 48);

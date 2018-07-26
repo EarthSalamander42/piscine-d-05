@@ -20,6 +20,10 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		dest[i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
+	while (dest[i] != '\0')
+	{
+		dest[i] = '\0';
+		i++;
+	}
 	return (dest);
 }
